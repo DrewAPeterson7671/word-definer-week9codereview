@@ -60,7 +60,7 @@ describe '#Word' do
       word = Word.new("landscape", nil)
       word.save()
       word.update("casual")
-      expect(album.name).to(eq("casual"))
+      expect(word.word_name).to(eq("casual"))
     end
   end
 
