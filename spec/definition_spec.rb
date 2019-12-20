@@ -79,4 +79,16 @@ describe '#Definition' do
     end
   end
 
+  describe('.find_by_word') do
+    it("finds definitions by the word") do
+      word2 = Word.new("treachery", nil)
+      word2.save
+      definition = Definition.new("deception", @word.id, nil)
+      definition.save()
+      definition2 = Definition.new("intention to betray", @word.id, nil)
+      definition2.save()
+      expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
+    end
+  end
+
 end
