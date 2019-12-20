@@ -38,6 +38,9 @@ class Definition
   end
 
   def delete
+    @@definitions.delete(self.id)
   end
+
+  
 end
 #
