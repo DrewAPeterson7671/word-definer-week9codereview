@@ -37,5 +37,12 @@ describe '#Word' do
     end
   end
 
+  describe("#==") do
+    it("is the same word if it has the same attributes of another word") do
+      word = Word.new("landscape", nil)
+      word2 = Word.new("landscape", nil)
+      expect(word).to(eq(word2))
+    end
+  end
 
 end

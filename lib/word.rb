@@ -23,7 +23,7 @@ class Word
   end
 
   def ==(word_to_compare)
-    self.word_name() == word_to_compare.word_name()
+    # self.word_name() == word_to_compare.word_name()
   end
 
   def self.find(id)
