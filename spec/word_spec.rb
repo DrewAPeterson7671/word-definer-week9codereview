@@ -87,4 +87,16 @@ describe '#Word' do
     end
   end
 
+  describe('.search') do
+    it("searches for a word") do
+      word = Word.new("landscape", nil)
+      word.save()
+      word2 = Word.new("consequence", nil)
+      word2.save()
+      word3 = Word.new("content", nil)
+      word3.save()
+      expect(Word.search("con")).to(eq([word2, word3]))
+    end
+  end
+
 end

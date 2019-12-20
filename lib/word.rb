@@ -42,4 +42,9 @@ class Word
   def word_definitions
     Definition.find_def_by_word(self.id)
   end
+
+  def search(search_word)
+    @@words.values().select { |word| word.name.match(/#{search_word}/i)}
+  end
+
 end
