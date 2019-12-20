@@ -7,7 +7,7 @@ describe '#Word' do
 
   before(:each) do
     Word.clear
-    # Definition.clear
+    Definition.clear
   end
 
   describe('#save') do
@@ -75,7 +75,7 @@ describe '#Word' do
     end
   end
 
-  describe('find_def_by_word') do
+  describe('word_definitions') do
     it("returns an words definitions") do
       word = Word.new("silly word", nil)
       word.save()
@@ -83,7 +83,7 @@ describe '#Word' do
       definition.save()
       definition2 = Definition.new("A dreary day", word.id, nil)
       definition2.save()
-      expect(word.definition_text).to(eq([definition, definition2]))
+      expect(word.word_definitions).to(eq([definition, definition2]))
     end
   end
 
