@@ -20,7 +20,7 @@ class Definition
   end
 
   def self.all
-    @@definitions.values()
+    # @@definitions.values()
   end
 
 
