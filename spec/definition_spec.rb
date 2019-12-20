@@ -18,5 +18,12 @@ describe '#Definition' do
     end
   end
 
+  describe('.all') do
+    it("returns a list of all definitions") do
+      definition = Definition.new("A sad mood", @word.id, nil)
+      definition2 = Definition.new("A dreary day", @word.id, nil)
+      expect(Definition.all).to(eq([definition, definition2]))
+    end
+  end
 
 end
