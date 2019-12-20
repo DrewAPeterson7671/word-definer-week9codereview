@@ -41,7 +41,7 @@ class Definition
     @@definitions.delete(self.id)
   end
 
-  def self.find_by_word(check_word_id)
+  def self.find_def_by_word(check_word_id)
     definitions = []
     @@definitions.values.each do |definition|
       if definition.word_id == check_word_id
@@ -50,5 +50,8 @@ class Definition
     end
     definitions
   end
+
+  def find_word_by_def
+  end
+
 end
-#

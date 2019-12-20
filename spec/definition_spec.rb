@@ -79,16 +79,23 @@ describe '#Definition' do
     end
   end
 
-  describe('.find_by_word') do
-    it("finds definitions by the word") do
+  describe('.find_def_by_word') do
+    it("finds definitions for a word") do
       word2 = Word.new("treachery", nil)
       word2.save
       definition = Definition.new("deception", @word.id, nil)
       definition.save()
       definition2 = Definition.new("intention to betray", word2.id, nil)
       definition2.save()
-      expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
+      expect(Definition.find_def_by_word(word2.id)).to(eq([definition2]))
     end
   end
 
+  describe('#album') do
+    it("finds the word by definition") do
+      definition = Definition.new("A dark mood", @word.id, nil)
+      definition.save()
+      expect(definition.find_word_by_def()).to(eq(@word))
+    end
+  end
 end
