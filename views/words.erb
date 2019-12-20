@@ -1,0 +1,25 @@
+<h1>Word Fun!</h1>
+
+<h2>Words you want to define.</h2>
+
+<h3>Your List of Words:</h3>
+<% if @words.any? %>
+  <ul>
+    <% @words.each do |word| %>
+      <li><a href="/words/<%= word.id %>"><%= word.word_name %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are currently no words to display.</p>
+<% end %>
+<form class="" action="/words/new" method="get">
+  <button type="submit" name="button">Add a new word</button>
+</form>
+
+<form action="/words/search" method="get">
+  <div class="form-group">
+    <label for="search">Search</label>
+    <input id="search" name="search" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Search</button>
+</form>
