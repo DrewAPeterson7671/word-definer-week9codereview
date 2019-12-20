@@ -35,4 +35,8 @@ class Word
     @@words[self.id] = Word.new(self.word_name, self.id)
   end
 
+  def delete()
+
+  end
+
 end
