@@ -27,5 +27,9 @@ class Definition
     @@definitions = {}
   end
 
+  def self.find(id)
+    # @@definitions[id]
+  end
+
 
 end

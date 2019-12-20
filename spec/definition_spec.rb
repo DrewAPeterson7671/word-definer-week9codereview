@@ -6,6 +6,8 @@ require 'pry'
 describe '#Definition' do
 
   before(:each) do
+    Word.clear
+    Definition.clear
     @word = Word.new("somber", nil)
     @word.save()
   end
@@ -28,7 +30,6 @@ describe '#Definition' do
 
   describe('.all') do
     it("returns a list of all definitions") do
-      @@definitions = {}
       definition = Definition.new("A sad mood", @word.id, nil)
       definition.save()
       definition2 = Definition.new("A dreary day", @word.id, nil)
@@ -47,5 +48,16 @@ describe '#Definition' do
       expect(Definition.all).to(eq([]))
     end
   end
+
+  describe('.find') do
+    it("finds a definition by id") do
+      definition = Definition.new("A sad mood", @word.id, nil)
+      definition.save()
+      definition2 = Definition.new("A dreary day", @word.id, nil)
+      definition2.save()
+      expect(Definition.find(definition.id)).to(eq([definition]))
+    end
+  end
+  
 
 end
