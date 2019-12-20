@@ -30,4 +30,9 @@ class Word
     @@words[id]
   end
 
+  def update(word_name)
+    # self.word_name = word_name
+    # @@words[self.id] = Album.new(self.name, self.id)
+  end
+
 end

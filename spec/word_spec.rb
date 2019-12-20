@@ -55,4 +55,13 @@ describe '#Word' do
     end
   end
 
+  describe("#update") do
+    it("updates a word by id") do
+      word = Word.new("landscape", nil)
+      word.save()
+      word.update("casual")
+      expect(album.name).to(eq("casual"))
+    end
+  end
+
 end
