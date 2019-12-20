@@ -91,7 +91,7 @@ describe '#Definition' do
     end
   end
 
-  describe('#album') do
+  describe('#find_word_by_def') do
     it("finds the word by definition") do
       definition = Definition.new("A dark mood", @word.id, nil)
       definition.save()

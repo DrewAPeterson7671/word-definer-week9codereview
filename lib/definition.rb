@@ -52,6 +52,7 @@ class Definition
   end
 
   def find_word_by_def
+    Word.find(self.word_id)
   end
-
+  
 end

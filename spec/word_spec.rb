@@ -75,4 +75,16 @@ describe '#Word' do
     end
   end
 
+  describe('find_def_by_word') do
+    it("returns an words definitions") do
+      word = Word.new("silly word", nil)
+      word.save()
+      definition = Definition.new("A sad mood", word.id, nil)
+      definition.save()
+      definition2 = Definition.new("A dreary day", word.id, nil)
+      definition2.save()
+      expect(word.definition_text).to(eq([definition, definition2]))
+    end
+  end
+
 end
