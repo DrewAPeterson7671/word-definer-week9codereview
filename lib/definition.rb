@@ -20,8 +20,12 @@ class Definition
   end
 
   def self.all
-    # @@definitions.values()
+    @@definitions.values()
   end
+
+  # def ('.clear') do
+  #
+  # end
 
 
 end
