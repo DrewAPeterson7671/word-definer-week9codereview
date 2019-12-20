@@ -12,9 +12,9 @@ describe '#Word' do
 
   describe('#save') do
       it("saves a word into the list") do
-      word = Word.new({:name => "landscape", :id => nil})
+      word = Word.new("landscape", nil)
       word.save()
-      word2 = Word.new({:nane => "consequence", id => nil})
+      word2 = Word.new("consequence", nil)
       word2.save()
       expect(Word.all).to(eq([word, word2]))
     end

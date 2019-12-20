@@ -1,11 +1,11 @@
 class Word
-  attr_reader :id, :word_name
+  attr_reader :id
   attr_accessor :word_name
   @@words = {}
   @@total_rows = 0
 
-  def initialize(name, id)
-    @word_name= word_name
+  def initialize(word_name, id)
+    @word_name = word_name
     @id = id || @@total_rows += 1
   end
 
@@ -16,9 +16,14 @@ class Word
   def self.clear
     @@words = {}
     @@total_rows = 0
-  end  
+  end
 
   def save
+    @@words[self.id] = Word.new(self.word_name, self.id)
+  end
+
+  def ==(word_to_compare)
+    self.word_name() == word_to_compare.word_name()
   end
 
 
