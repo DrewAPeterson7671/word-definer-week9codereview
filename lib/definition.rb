@@ -49,6 +49,6 @@ class Definition
       end
     end
     definitions
-  end      
+  end
 end
 #
