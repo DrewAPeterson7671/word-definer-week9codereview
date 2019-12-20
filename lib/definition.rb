@@ -16,7 +16,7 @@ class Definition
   end
 
   def save
-    # @@definitions[self.id] = Definition.new(self.definition_text, self.word_id, self.id)
+    @@definitions[self.id] = Definition.new(self.definition_text, self.word_id, self.id)
   end
 
   def self.all
