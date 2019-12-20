@@ -55,9 +55,9 @@ describe '#Definition' do
       definition.save()
       definition2 = Definition.new("A dreary day", @word.id, nil)
       definition2.save()
-      expect(Definition.find(definition.id)).to(eq([definition]))
+      expect(Definition.find(definition.id)).to(eq(definition))
     end
   end
-  
+
 
 end
