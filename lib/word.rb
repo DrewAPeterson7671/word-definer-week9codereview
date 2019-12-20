@@ -31,8 +31,8 @@ class Word
   end
 
   def update(word_name)
-    # self.word_name = word_name
-    # @@words[self.id] = Word.new(self.name, self.id)
+    self.word_name = word_name
+    @@words[self.id] = Word.new(self.word_name, self.id)
   end
 
 end
