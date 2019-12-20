@@ -1,6 +1,7 @@
 class Definition
   attr_reader :id
   attr_accessor :definition_text, :word_id
+
   @@definitions = {}
   @@total_rows = 0
 
@@ -14,8 +15,13 @@ class Definition
     (self.definition_text() == def_to_compare.definition_text()) && (self.word_id() == def_to_compare.word_id())
   end
 
-  def self.all
+  def save
+    # @@definitions[self.id] = Definition.new(self.definition_text, self.word_id, self.id)
   end
 
-  
+  def self.all
+    @@definitions.values()
+  end
+
+
 end

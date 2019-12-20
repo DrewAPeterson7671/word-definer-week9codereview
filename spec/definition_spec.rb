@@ -18,12 +18,23 @@ describe '#Definition' do
     end
   end
 
-  describe('.all') do
-    it("returns a list of all definitions") do
+  describe('#save') do
+    it("saves a definition") do
       definition = Definition.new("A sad mood", @word.id, nil)
-      definition2 = Definition.new("A dreary day", @word.id, nil)
-      expect(Definition.all).to(eq([definition, definition2]))
+      definition.save()
+      expect(Definition.all).to(eq([definition]))
     end
   end
+
+
+
+  # describe('.all') do
+  #   it("returns a list of all definitions") do
+  #     @@definitions = {}
+  #     definition3 = Definition.new("A sad mood", @word.id, nil)
+  #     definition4 = Definition.new("A dreary day", @word.id, nil)
+  #     expect(Definition.all).to(eq([definition3, definition4]))
+  #   end
+  # end
 
 end
