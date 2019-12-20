@@ -10,7 +10,7 @@ class Word
   end
 
   def self.all
-    # @@words.values()
+    @@words.values()
   end
 
   def self.clear
