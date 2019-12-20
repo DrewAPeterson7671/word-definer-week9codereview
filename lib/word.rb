@@ -10,7 +10,7 @@ class Word
   end
 
   def self.all
-    @@words.values()
+    # @@words.values()
   end
 
   def self.clear
@@ -26,6 +26,8 @@ class Word
     self.word_name() == word_to_compare.word_name()
   end
 
-
+  def self.find(id)
+    @@words[id]
+  end
 
 end

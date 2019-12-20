@@ -11,12 +11,18 @@ describe '#Word' do
   end
 
   describe('#save') do
-      it("saves a word into the list") do
+    it("saves a word into the list") do
       word = Word.new("landscape", nil)
       word.save()
       word2 = Word.new("consequence", nil)
       word2.save()
       expect(Word.all).to(eq([word, word2]))
+    end
+  end
+
+  describe(".all") do
+    it("returns and empty array when there are no words") do
+      expect(Word.all).to(eq([]))
     end
   end
 
