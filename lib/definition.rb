@@ -23,9 +23,9 @@ class Definition
     @@definitions.values()
   end
 
-  # def ('.clear') do
-  #
-  # end
+  def self.clear
+    @@definition = {}
+  end  
 
 
 end
