@@ -26,4 +26,16 @@ describe '#Word' do
     end
   end
 
+  describe(".clear") do
+    it("clears all words") do
+      word = Word.new("landscape", nil)
+      word.save()
+      word2 = Word.new("consequence", nil)
+      word2.save()
+      Word.clear()
+      expect(Album.all).to(eq([]))
+    end
+  end
+
+
 end
