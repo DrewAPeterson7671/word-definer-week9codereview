@@ -31,6 +31,8 @@ class Definition
     @@definitions[id]
   end
 
-
+  def self.update (definition_text, album_id)
+  end
+  
 end
 #
