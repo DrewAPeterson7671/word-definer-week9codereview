@@ -47,4 +47,12 @@ class Word
     @@words.values().select { |word| word.word_name.match(/#{search_word}/i)}
   end
 
+  def self.sort()
+    sorted_array = []
+    self.all.each do |a|
+      sorted_array.push(a.word_name)
+    end
+    # results = sorted_array.sort.map {|a| self.search(a) [0] }
+  end
+
 end
