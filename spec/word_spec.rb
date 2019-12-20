@@ -33,7 +33,7 @@ describe '#Word' do
       word2 = Word.new("consequence", nil)
       word2.save()
       Word.clear()
-      expect(Album.all).to(eq([]))
+      expect(Word.all).to(eq([]))
     end
   end
 
