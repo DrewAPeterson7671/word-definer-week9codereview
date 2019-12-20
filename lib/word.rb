@@ -14,8 +14,8 @@ class Word
   end
 
   def self.clear
-    # @@words = {}
-    # @@total_rows = 0
+    @@words = {}
+    @@total_rows = 0
   end
 
   def save
