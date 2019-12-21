@@ -1,4 +1,4 @@
-# _Anagrams and Antigrams_
+# _Word Fun_
 
 #### _Website to help children learn word definitions, 12/20/2019_
 
