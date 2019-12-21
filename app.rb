@@ -25,7 +25,7 @@ get('/words/new') do
 end
 
 post('/words') do
-  name = params[:word_name]
+  word_name = params[:word_name]
   word = Word.new(word_name, nil)
   word.save()
   redirect to ('/words')
