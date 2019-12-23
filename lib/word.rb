@@ -43,8 +43,8 @@ class Word
     Definition.find_def_by_word(self.id)
   end
 
-  def self.search(search_word)
-    @@words.values().select { |word| word.word_name.match(/#{search_word}/i)}
+  def self.search(search_name)
+    @@words.values().select { |word| word.word_name.match(/#{search_name}/i)}
   end
 
   def self.sort()

@@ -15,8 +15,8 @@ get('/words') do
 end
 
 get('/words/search') do
-  user_search = params[:search]
-  @search = Word.search(search_word)
+  search_name = params[:search]
+  @search = Word.search(search_name)
   erb(:search)
 end
 

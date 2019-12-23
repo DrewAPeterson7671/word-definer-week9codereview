@@ -2,9 +2,11 @@
 <% if @search.any? %>
   <ul>
     <% @search.each do |word| %>
-      <li><a href="/words/<%= word.id %>"><%= word.name %></a></li>
+      <li><a href="/words/<%= word.id %>"><%= word.word_name %></a></li>
     <% end %>
   </ul>
 <% else %>
   <p>no search results.</p>
 <% end %>
+
+<p><a href="/words">Return to word list</a></p>
