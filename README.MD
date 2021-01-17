@@ -36,7 +36,7 @@ https://young-cove-26932.herokuapp.com/
 * Clone the project locally from github.
 * Install Bundler if you do not already have it by running gem install bundler in the terminal.
 * Run bundle install to manage gems; if you make additional changes to the Gemfile, you will need to run this command again.
-
+* From the terminal, run bundle exec rackup -p 3000 and open a browswer to localhost:3000.
 
 
 ## Known Bugs
