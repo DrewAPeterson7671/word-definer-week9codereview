@@ -5,6 +5,10 @@ require('./lib/definition')
 require('pry')
 also_reload('lib/**/*.rb')
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 get('/') do
   redirect to ('/words')
 end
